@@ -1,0 +1,96 @@
+#uiTitle {
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Input form */
+#dataForm {
+    text-align: center;
+}
+
+#dataForm button {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    border: none;
+}
+
+#dataForm input {
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid black;
+    text-align: center;
+}
+#dataInputField {
+    width: 50%;
+}
+#userInputField, #passwordInputField {
+    width: 23.8%;
+    margin-bottom: 5px;
+}
+
+/* Results table */
+#resultsTable {
+    table-layout: fixed;
+    width: 52%;
+    margin-left: 24%;
+    margin-top: 5px;
+    text-align: left;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+#resultsTable tbody {
+    display: block;
+    height: 60%;
+}
+
+#resultsTable thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* even columns width , fix width of table too*/
+}
+
+#resultsTable td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dataColumn {
+    border-right: 1px solid black;
+    width: 70%;
+}
+
+.dataRow:hover {
+    border-color: #00abd2;
+    background: cyan;
+    cursor: pointer;
+}
+
+/* Sticky footer */
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: black;
+    color: darkcyan;
+    text-align: center;
+    font-size: 16px;
+}
