@@ -1,3 +1,4 @@
+/* Titles */
 #uiTitle {
     color: white;
     text-align: center;
@@ -7,74 +8,68 @@
     padding-bottom: 20px;
 }
 
-/* Input form */
-#dataForm {
+.sectionTitle {
     text-align: center;
 }
 
-#dataForm button {
+#buttonDiv {
+    text-align: center;
+}
+
+#submitButton {
     border-radius: 5px;
     background-color: black;
     color: white;
     padding: 10px;
-    margin-top: 5px;
-    font-size: 14px;
+    margin-top: 20px;
+    font-size: 16px;
     border: none;
+    width: 10%;
 }
 
-#dataForm input {
-    border-radius: 5px;
-    color: black;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid black;
+.loanInput {
+    width: 100%;
+    box-sizing: border-box;
     text-align: center;
-}
-#dataInputField {
-    width: 50%;
-}
-#userInputField, #passwordInputField {
-    width: 23.8%;
-    margin-bottom: 5px;
+    border: 0;
 }
 
-/* Results table */
-#resultsTable {
+/* Tables */
+.mytable {
     table-layout: fixed;
-    width: 52%;
-    margin-left: 24%;
+    width: 30%;
+    margin-left: 35%;
     margin-top: 5px;
-    text-align: left;
+    text-align: center;
     border-radius: 5px;
     border: 1px solid lightgray;
 }
 
-#resultsTable tbody {
+.mytable tbody {
     display: block;
     height: 60%;
 }
 
-#resultsTable thead, tbody tr {
+.mytable thead,
+tbody tr {
     display: table;
     width: 100%;
     table-layout: fixed; /* even columns width , fix width of table too*/
 }
 
-#resultsTable td {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.mytable thead {
+    border-bottom: 1px solid lightgrey;
 }
 
-.dataColumn {
+.mytable td {
+    /*white-space: nowrap;*/
+    /*overflow: auto;*/
+    /*text-overflow: ellipsis;*/
+}
+
+.mytable .fieldColumn {
     border-right: 1px solid black;
-    width: 70%;
-}
-
-.dataRow:hover {
-    border-color: #00abd2;
-    background: cyan;
-    cursor: pointer;
+    width: 50%;
 }
 
 /* Sticky footer */
@@ -90,7 +85,7 @@ body {
     /* Set the fixed height of the footer here */
     height: 60px;
     background-color: black;
-    color: darkcyan;
+    color: white;
     text-align: center;
     font-size: 16px;
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inbank Demo UI</title>
+
+    <!-- th:href.. is needed because otherwise it won't find the external files when the application is deployed as a .war on an external Tomcat server -->
+    <link rel="stylesheet" th:href="@{/css/inbank.css}"/>
+    <script type="text/javascript" th:src="@{/js/inbank.js}"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <h2 id="uiTitle">Inbank Demo: Loan Decision UI</h2>
+
+    <h3 class="sectionTitle">Loan request data</h3>
+
+    <form id="dataForm">
+        <table id="requestTable" class="mytable">
+            <thead>
+            <tr>
+                <th class="fieldColumn">Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody id="requestTableBody">
+            <tr>
+                <td class="fieldColumn">Personal code</td>
+                <td><input type="text" id="personalCodeInputField" class="loanInput" placeholder="Personal code"></td>
+            </tr>
+            <tr>
+                <td class="fieldColumn">Loan amount</td>
+                <td><input type="text" id="loanAmountInputField" class="loanInput" placeholder="Loan Amount"></td>
+
+            </tr>
+            <tr>
+                <td class="fieldColumn">Loan period in months</td>
+                <td><input type="text" id="loanPeriodInputField" class="loanInput" placeholder="Loan period"></td>
+
+            </tr>
+            </tbody>
+        </table>
+        <div id="buttonDiv">
+            <button type="button" value="Apply" id="submitButton" onclick="applyButtonClick()">Apply</button>
+        </div>
+    </form>
+
+    <h3 class="sectionTitle">Request results</h3>
+    <table id="resultsTable" class="mytable">
+        <thead>
+        <tr>
+            <th class="fieldColumn">Field</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody id="resultsTableBody">
+        <tr>
+            <td class="fieldColumn">Decision</td>
+            <td id="resultsTableDecisionValueCell"></td>
+        </tr>
+        <tr>
+            <td class="fieldColumn">Loan amount</td>
+            <td id="resultsTableLoanAmountValueCell"></td>
+        </tr>
+        <tr>
+            <td class="fieldColumn">Loan period in months</td>
+            <td id="resultsTableLoanPeriodValueCell"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+
+<footer class="footer">
+    Author: Märten Heinsalu
+    <br>
+    2020
+</footer>
+
+</html>

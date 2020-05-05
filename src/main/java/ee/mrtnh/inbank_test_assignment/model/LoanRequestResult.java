@@ -32,7 +32,7 @@ public class LoanRequestResult {
 
     @Override
     public String toString() {
-        return "LoanRequestResult{" +
+        return "LoanRequestResult: {" +
                 "decision=" + decision +
                 ", loanAmount=" + loanAmount +
                 ", loanPeriod=" + loanPeriod +

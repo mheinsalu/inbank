@@ -4,12 +4,8 @@ import ee.mrtnh.inbank_test_assignment.model.Client;
 import ee.mrtnh.inbank_test_assignment.model.LoanRequest;
 import ee.mrtnh.inbank_test_assignment.model.LoanRequestResult;
 import ee.mrtnh.inbank_test_assignment.repository.ClientRepository;
-import lombok.extern.java.Log;
-import lombok.extern.log4j.Log4j;
-import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -31,6 +27,7 @@ public class InbankService {
 
     public LoanRequestResult processLoanRequest(LoanRequest loanRequest) {
         log.info("Processing loan request");
+        log.info(loanRequest.toString());
 
         if (loanRequestViolatesMinimumConstraints(loanRequest)) {
             log.info("Loan request violates minimum constraints");
@@ -48,7 +45,7 @@ public class InbankService {
             return new LoanRequestResult("Client in debt. No loan allowed.");
         }
 
-        log.info("Client's credit score based on this loan request is " + calculateCreditScore(loanRequest, client));
+        log.info("Client's credit score based on this loan request is " + Math.round(calculateCreditScore(loanRequest, client) * 100.0) / 100.0);
 
         double maxLoanAmount = calculateMaxLoanAmountForPeriod(loanRequest, client);
         if (maxLoanAmount >= loanRequest.getRequestedLoanAmount()) {

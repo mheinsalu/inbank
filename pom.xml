@@ -10,12 +10,12 @@
     </parent>
     <groupId>ee.mrtnh</groupId>
     <artifactId>inbank_test_assignment</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
     <name>inbank_test_assignment</name>
     <description>Inbank test assignment</description>
 
     <properties>
-        <java.version>12</java.version>
+        <java.version>8</java.version>
     </properties>
 
     <dependencies>

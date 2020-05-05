@@ -12,4 +12,13 @@ public class LoanRequest {
     private long personalCode;
     private int requestedLoanAmount;
     private int loanPeriodInMonths;
+
+    @Override
+    public String toString() {
+        return "LoanRequest: {" +
+                "personalCode=" + personalCode +
+                ", requestedLoanAmount=" + requestedLoanAmount +
+                ", loanPeriodInMonths='" + loanPeriodInMonths + '\'' +
+                '}';
+    }
 }
