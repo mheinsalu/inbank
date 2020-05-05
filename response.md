@@ -1,0 +1,9 @@
+Sinu esitatud lahendusele ei ole kirjutatud ühtegi testi ning see on väga suur puudujääk.
+Kogu põhiline loogika on kogutud teenuse kihti. Seal on nii sisendi valideerimine kui ka sisuline pool. Sisendi valideerimise oleks saanud lihtsasti implementeerida juba request objektis annotatsioonidega. Lisaks on teenuse juhtloogika pikk ja kohmakas. Meetod on juba 45 rida. Seda annaks parandada kui jupitada pikk meetod alam meetoditeks. Samuti on seal duplikeeritud if plokke, mis kontrollivad maxLounAmounti tingimusi, kuid mille saaks koondada üheks kokku.
+Luuakse ise käsitsi vastuse klasse. Parem praktika oleks kasutada Builder mustrit. Kuna kasutad Lombokit, oleks selle saanud lihtsalt klassile annotatsiooniga lisada.
+Jäi silma tõlgitud tekstiliste väärtuste tagastamine backendi poolt. Kui soov tekstilisi väärtusi tagastada siis parem praktika oleks kasutada tõlgitavaid võtmeid ja nende tõlkimine realiseerida front endi poolel.
+Üldine tehniliseks lahenduseks kasutatud valikud, mis annavad aimu, et Sa ei ole väga palju kokku puutunud uuemate lähenemistega:
+Java 8. Miks mitte kasutada uusimat Java versiooni?
+Front on ehitatud backend rakenduse külge. Kuigi see on täiesti toimiv lahendus, siis uuemad rakendused on ehitatud eraldatuna, nii et backendi rakendus serveerib ainult apit, frondi jaoks on kasutusel mõni javascriptil põhinev tehnoloogia.
+Oled kirjutanud ise javascriptis numbrite valideerimise loogika, kuid see on ebavajalik. Sama oleks saanud saavutada vormil, näiteks input type="number" kasutades. See tugi on html5-l olemas juba aastast 2014. Muidugi on võimalik sellest mööda hiilida, aga topeltkontroll on api poolel eraldi olemas.
+Javascripti osas kasutad aegunud lähenemist promise chainimiseks. Uuem lähenemine on await võtmesõna. Selle kasutamine lihtsustab koodi struktuuri märgatavalt.
